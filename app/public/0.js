@@ -4,19 +4,19 @@ xhr.onreadystatechange = function () {
   switch (xhr.readyState) {
     case 0:
       // UNSENT (未打开)
-      debugger
+      // debugger
       break
     case 1:
       // OPENED  (未发送)
-      debugger
+      // debugger
       break
     case 2:
       // HEADERS_RECEIVED (已获取响应头)
-      debugger
+      // debugger
       break
     case 3:
       // LOADING (正在下载响应体)
-      debugger
+      // debugger
       break
     case 4:
       // DONE (请求完成)
@@ -29,5 +29,5 @@ xhr.onreadystatechange = function () {
   }
 }
 
-xhr.open('GET', 'http://y.stuq.com:7001/json', true)
-xhr.send(null)
+xhr.open('GET', 'http://127.0.0.1:7001/json', true)
+xhr.send()

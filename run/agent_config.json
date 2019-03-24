@@ -1,39 +1,10 @@
 {
   "config": {
-    "onerror": {
-      "errorPageUrl": "",
-      "appErrorFilter": null
-    },
     "session": {
       "maxAge": 86400000,
       "key": "EGG_SESS",
       "httpOnly": true,
       "encrypt": true
-    },
-    "i18n": {
-      "defaultLocale": "en_US",
-      "dirs": [],
-      "queryField": "locale",
-      "cookieField": "locale",
-      "cookieMaxAge": "1y"
-    },
-    "watcher": {
-      "type": "development",
-      "eventSources": {
-        "default": "/Users/miniflycn/github/showcase1/node_modules/_egg-watcher@2.1.3@egg-watcher/lib/event-sources/default",
-        "development": "/Users/miniflycn/github/showcase1/node_modules/_egg-watcher@2.1.3@egg-watcher/lib/event-sources/development"
-      }
-    },
-    "multipart": {
-      "autoFields": false,
-      "defaultCharset": "utf8",
-      "fieldNameSize": 100,
-      "fieldSize": "100kb",
-      "fields": 10,
-      "fileSize": "10mb",
-      "files": 10,
-      "fileExtensions": [],
-      "whitelist": null
     },
     "security": {
       "domainWhiteList": [],
@@ -77,32 +48,14 @@
       "csp": {
         "enable": false,
         "policy": {}
+      },
+      "ssrf": {
+        "ipBlackList": null,
+        "checkAddress": null
       }
     },
     "helper": {
       "shtml": {}
-    },
-    "development": {
-      "watchDirs": [],
-      "ignoreDirs": [],
-      "fastReady": true,
-      "reloadOnDebug": true
-    },
-    "logrotator": {
-      "filesRotateByHour": null,
-      "filesRotateBySize": null,
-      "maxFileSize": 52428800,
-      "maxFiles": 10,
-      "rotateDuration": 60000,
-      "maxDays": 31
-    },
-    "static": {
-      "prefix": "/public/",
-      "dir": "/Users/miniflycn/github/showcase1/app/public",
-      "dynamic": true,
-      "preload": false,
-      "buffer": false,
-      "maxFiles": 1000
     },
     "jsonp": {
       "limit": 50,
@@ -112,8 +65,60 @@
       ],
       "csrf": false
     },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieMaxAge": "1y"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-watcher/lib/event-sources/development"
+      }
+    },
+    "multipart": {
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": "100kb",
+      "fields": 10,
+      "fileSize": "10mb",
+      "files": 10,
+      "fileExtensions": [],
+      "whitelist": null
+    },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "hourDelimiter": "-",
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/public/",
+      "dir": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/app/public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": false,
+      "maxFiles": 1000
+    },
     "view": {
-      "root": "/Users/miniflycn/github/showcase1/app/view",
+      "root": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/app/view",
       "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
@@ -125,7 +130,7 @@
     "proxy": false,
     "protocolHeaders": "x-forwarded-proto",
     "ipHeaders": "x-forwarded-for",
-    "hostHeaders": "x-forwarded-host",
+    "hostHeaders": "",
     "pkg": {
       "name": "showcase1",
       "version": "0.0.1",
@@ -133,7 +138,7 @@
       "main": "index.js",
       "scripts": {
         "test": "mocha",
-        "dev": "egg-bin dev"
+        "start": "egg-bin dev"
       },
       "repository": {
         "type": "git",
@@ -151,12 +156,18 @@
       "devDependencies": {
         "egg": "^1.7.0",
         "egg-bin": "^4.1.0",
-        "egg-static": "^1.4.1"
+        "egg-static": "^1.4.1",
+        "eslint": "^5.15.3",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-standard": "^4.0.0"
       }
     },
-    "baseDir": "/Users/miniflycn/github/showcase1",
-    "HOME": "/Users/miniflycn",
-    "rundir": "/Users/miniflycn/github/showcase1/run",
+    "baseDir": "/Users/kaiser/Workspace/practice/Kaiser/showcase1",
+    "HOME": "/Users/kaiser",
+    "rundir": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -186,7 +197,7 @@
       }
     },
     "logger": {
-      "dir": "/Users/miniflycn/github/showcase1/logs/showcase1",
+      "dir": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/logs/showcase1",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -201,6 +212,7 @@
       "coreLogger": {
         "consoleLevel": "WARN"
       },
+      "allowDebugAtProd": false,
       "type": "agent"
     },
     "httpclient": {
@@ -238,28 +250,15 @@
         "hostname": ""
       }
     },
-    "coreMiddlewares": [
-      "meta",
-      "siteFile",
-      "notfound",
-      "bodyParser",
-      "overrideMethod"
-    ],
+    "clusterClient": {
+      "maxWaitTime": 60000,
+      "responseTimeout": 60000
+    },
+    "coreMiddlewares": "~config~coreMiddleware",
     "appMiddlewares": [],
-    "appMiddleware": []
+    "appMiddleware": "~config~appMiddlewares"
   },
   "plugins": {
-    "onerror": {
-      "enable": true,
-      "package": "egg-onerror",
-      "name": "onerror",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-onerror@1.5.0@egg-onerror",
-      "version": "1.5.0"
-    },
     "session": {
       "enable": true,
       "package": "egg-session",
@@ -267,42 +266,9 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-session@2.1.1@egg-session",
-      "version": "2.1.1"
-    },
-    "i18n": {
-      "enable": true,
-      "package": "egg-i18n",
-      "name": "i18n",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-i18n@1.1.1@egg-i18n",
-      "version": "1.1.1"
-    },
-    "watcher": {
-      "enable": true,
-      "package": "egg-watcher",
-      "name": "watcher",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-watcher@2.1.3@egg-watcher",
-      "version": "2.1.3"
-    },
-    "multipart": {
-      "enable": true,
-      "package": "egg-multipart",
-      "name": "multipart",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-multipart@1.5.0@egg-multipart",
-      "version": "1.5.0"
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-session",
+      "version": "2.2.0"
     },
     "security": {
       "enable": true,
@@ -313,9 +279,68 @@
         "session"
       ],
       "env": [],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-security@1.12.1@egg-security",
-      "version": "1.12.1"
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-security",
+      "version": "1.13.2"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-jsonp",
+      "version": "1.2.2"
+    },
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-onerror",
+      "version": "1.6.0"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-i18n",
+      "version": "1.2.0"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-watcher",
+      "version": "2.2.0"
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-multipart",
+      "version": "1.5.1"
     },
     "development": {
       "enable": true,
@@ -328,9 +353,9 @@
       "env": [
         "local"
       ],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-development@1.3.1@egg-development",
-      "version": "1.3.1"
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-development",
+      "version": "1.4.2"
     },
     "schedule": {
       "enable": true,
@@ -339,9 +364,9 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-schedule@2.4.1@egg-schedule",
-      "version": "2.4.1"
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-schedule",
+      "version": "2.6.0"
     },
     "logrotator": {
       "enable": true,
@@ -352,9 +377,9 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-logrotator@2.2.3@egg-logrotator",
-      "version": "2.2.3"
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-logrotator",
+      "version": "2.3.3"
     },
     "static": {
       "enable": true,
@@ -363,22 +388,9 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-static@1.4.1@egg-static",
-      "version": "1.4.1"
-    },
-    "jsonp": {
-      "enable": true,
-      "package": "egg-jsonp",
-      "name": "jsonp",
-      "dependencies": [],
-      "optionalDependencies": [
-        "security"
-      ],
-      "env": [],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-jsonp@1.1.2@egg-jsonp",
-      "version": "1.1.2"
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-static",
+      "version": "1.5.1"
     },
     "view": {
       "enable": true,
@@ -387,9 +399,9 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/miniflycn/github/showcase1/node_modules/_egg@1.7.0@egg/config/plugin.js",
-      "path": "/Users/miniflycn/github/showcase1/node_modules/_egg-view@1.1.2@egg-view",
-      "version": "1.1.2"
+      "from": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg/config/plugin.js",
+      "path": "/Users/kaiser/Workspace/practice/Kaiser/showcase1/node_modules/egg-view",
+      "version": "1.2.0"
     }
   }
 }

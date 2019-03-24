@@ -6,7 +6,7 @@ window.xxx = function (value) {
 }
 
 var script = document.createElement('script')
-script.src = 'http://x.stuq.com:7001/json?callback=xxx'
+script.src = 'http://127.0.0.1:7001/json?callback=xxx'
 document.body.appendChild(script)
 
 /**

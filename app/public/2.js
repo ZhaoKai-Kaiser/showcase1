@@ -5,5 +5,5 @@ xhr.onreadystatechange = function () {
   }
 }
 // xhr.withCredentials = true
-xhr.open('GET', 'http://x.stuq.com:7001/cros')
+xhr.open('GET', 'http://127.0.0.1:7001/cros')
 xhr.send(null)

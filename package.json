@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "dev": "egg-bin dev"
+    "start": "egg-bin dev"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,12 @@
   "devDependencies": {
     "egg": "^1.7.0",
     "egg-bin": "^4.1.0",
-    "egg-static": "^1.4.1"
+    "egg-static": "^1.4.1",
+    "eslint": "^5.15.3",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
   }
 }

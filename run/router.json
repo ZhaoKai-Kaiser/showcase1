@@ -1,0 +1,42 @@
+[
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/json",
+    "regexp": "/^\\/json(?:\\/(?=$))?$/",
+    "stack": [
+      "jsonp",
+      "/Users/kaiser/Workspace/practice/Kaiser/showcase1/app/controller/json.js#MsgController.index()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/cros",
+    "regexp": "/^\\/cros(?:\\/(?=$))?$/",
+    "stack": [
+      "/Users/kaiser/Workspace/practice/Kaiser/showcase1/app/controller/cros.js#CrosController.index()"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/__loader_trace__",
+    "regexp": "/^\\/__loader_trace__(?:\\/(?=$))?$/",
+    "stack": [
+      "anonymous"
+    ]
+  }
+]
